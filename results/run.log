@@ -1,0 +1,104 @@
+Found 13 RTF file(s)
+Parsed 1225 case chunks
+Wrote manifest /workspace/appendectomy_out/full/manifest.csv
+Running pass-1 on 1225 cases with 12 workers
+  pass1 20/1225 elapsed=14.9s
+  pass1 40/1225 elapsed=24.7s
+  pass1 60/1225 elapsed=33.6s
+  pass1 80/1225 elapsed=42.4s
+  pass1 100/1225 elapsed=50.1s
+  pass1 120/1225 elapsed=61.4s
+  pass1 140/1225 elapsed=69.8s
+  pass1 160/1225 elapsed=77.4s
+  pass1 180/1225 elapsed=84.2s
+  pass1 200/1225 elapsed=92.2s
+  pass1 220/1225 elapsed=99.6s
+  pass1 240/1225 elapsed=107.0s
+  pass1 260/1225 elapsed=114.1s
+  pass1 280/1225 elapsed=119.8s
+  pass1 300/1225 elapsed=127.2s
+  pass1 320/1225 elapsed=135.5s
+  pass1 340/1225 elapsed=141.8s
+  pass1 360/1225 elapsed=148.3s
+  pass1 380/1225 elapsed=155.0s
+  pass1 400/1225 elapsed=161.2s
+  pass1 420/1225 elapsed=168.8s
+  pass1 440/1225 elapsed=176.3s
+  pass1 460/1225 elapsed=184.2s
+  pass1 480/1225 elapsed=193.2s
+  pass1 500/1225 elapsed=199.8s
+  pass1 520/1225 elapsed=206.7s
+  pass1 540/1225 elapsed=214.0s
+  pass1 560/1225 elapsed=221.6s
+  pass1 580/1225 elapsed=230.4s
+  pass1 600/1225 elapsed=238.1s
+  pass1 620/1225 elapsed=246.2s
+  pass1 640/1225 elapsed=253.8s
+  pass1 660/1225 elapsed=260.5s
+  pass1 680/1225 elapsed=267.1s
+  pass1 700/1225 elapsed=274.7s
+  pass1 720/1225 elapsed=281.6s
+  pass1 740/1225 elapsed=288.5s
+  pass1 760/1225 elapsed=294.8s
+  pass1 780/1225 elapsed=301.8s
+  pass1 800/1225 elapsed=308.6s
+  pass1 820/1225 elapsed=315.5s
+  pass1 840/1225 elapsed=323.4s
+  pass1 860/1225 elapsed=330.1s
+  pass1 880/1225 elapsed=337.2s
+  pass1 900/1225 elapsed=343.3s
+  pass1 920/1225 elapsed=350.3s
+  pass1 940/1225 elapsed=357.5s
+  pass1 960/1225 elapsed=364.2s
+  pass1 980/1225 elapsed=370.3s
+  pass1 1000/1225 elapsed=377.7s
+  pass1 1020/1225 elapsed=385.0s
+  pass1 1040/1225 elapsed=392.1s
+  pass1 1060/1225 elapsed=399.5s
+  pass1 1080/1225 elapsed=406.5s
+  pass1 1100/1225 elapsed=413.3s
+  pass1 1120/1225 elapsed=419.6s
+  pass1 1140/1225 elapsed=426.6s
+  pass1 1160/1225 elapsed=432.3s
+  pass1 1180/1225 elapsed=439.3s
+  pass1 1200/1225 elapsed=446.8s
+  pass1 1220/1225 elapsed=453.0s
+  pass1 1225/1225 elapsed=453.9s
+Running pass-2 on 164 candidates
+  pass2 10/164 elapsed=498.9s
+  pass2 20/164 elapsed=535.8s
+  pass2 30/164 elapsed=578.2s
+  pass2 40/164 elapsed=611.4s
+  pass2 50/164 elapsed=649.2s
+  pass2 60/164 elapsed=681.8s
+  pass2 70/164 elapsed=714.0s
+  pass2 80/164 elapsed=751.7s
+  pass2 90/164 elapsed=786.0s
+  pass2 100/164 elapsed=817.5s
+  pass2 110/164 elapsed=845.3s
+  pass2 120/164 elapsed=883.2s
+  pass2 130/164 elapsed=920.7s
+  pass2 140/164 elapsed=950.6s
+  pass2 150/164 elapsed=982.2s
+  pass2 160/164 elapsed=1013.8s
+  pass2 164/164 elapsed=1019.1s
+Wrote xlsx /workspace/appendectomy_out/full/AppendectomyMaster.xlsx
+Wrote master csv /workspace/appendectomy_out/full/case_master.csv
+Wrote extended csv /workspace/appendectomy_out/full/extended.csv
+Wrote exclusions csv /workspace/appendectomy_out/full/exclusions.csv
+
+==================== SUMMARY ====================
+Total parsed cases:        1225
+Core analytic cases:       82
+Excluded / non-core:       1143
+Top exclusion reasons:
+    917  Is_Malpractice_Case=NO
+     84  Appendicitis_Index=NO
+     73  Is_Malpractice_Case=UNKNOWN
+     15  Not a medical malpractice case
+      7  Not a medical malpractice claim
+      4  Appendicitis_Index=UNKNOWN
+      2  Harm=UNKNOWN
+      2  No operative details or documented clinical harm
+      2  Non‑malpractice civil‑rights claim
+      2  Harm=NO
