@@ -1,0 +1,16 @@
+Segment counts per RTF after running scripts/split_rtf.py
+(End-of-Document-delimited; last index is a copyright-only trailer)
+
+  westlaw_100_full_text_items_for_appendectomy  (segments 0000..0100; last = copyright trailer)
+  westlaw_100_full_text_items_for_appendectomy1  (segments 0000..0100; last = copyright trailer)
+  westlaw_100_full_text_items_for_appendectomy10  (segments 0000..0100; last = copyright trailer)
+  westlaw_100_full_text_items_for_appendectomy11  (segments 0000..0100; last = copyright trailer)
+  westlaw_100_full_text_items_for_appendectomy2  (segments 0000..0100; last = copyright trailer)
+  westlaw_100_full_text_items_for_appendectomy3  (segments 0000..0100; last = copyright trailer)
+  westlaw_100_full_text_items_for_appendectomy4  (segments 0000..0100; last = copyright trailer)
+  westlaw_100_full_text_items_for_appendectomy5  (segments 0000..0100; last = copyright trailer)
+  westlaw_100_full_text_items_for_appendectomy6  (segments 0000..0100; last = copyright trailer)
+  westlaw_100_full_text_items_for_appendectomy7  (segments 0000..0100; last = copyright trailer)
+  westlaw_100_full_text_items_for_appendectomy8  (segments 0000..0100; last = copyright trailer)
+  westlaw_100_full_text_items_for_appendectomy9  (segments 0000..0100; last = copyright trailer)
+  westlaw_25_full_text_items_for_appendectomy12  (segments 0000..0025; last = copyright trailer)

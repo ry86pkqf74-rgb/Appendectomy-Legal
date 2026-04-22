@@ -1,0 +1,232 @@
+{
+  "_comment": "Controlled vocabularies — pulled verbatim from AppendectomyMaster.xlsx > Data_Dictionary. Every coded field's allowed values are enforced by validate_output.py. Categorical/boolean -> UNKNOWN when unclear. Money/numeric -> blank. Never force.",
+
+  "yes_no_unknown": ["YES", "NO", "UNKNOWN"],
+  "yes_no": ["YES", "NO"],
+
+  "Jurisdiction": ["Federal", "State", "Unknown"],
+
+  "Legal_Outcome": [
+    "Plaintiff-favorable",
+    "Defense-favorable",
+    "Settlement",
+    "Mixed",
+    "Unknown"
+  ],
+
+  "Appellate_Status": [
+    "Original",
+    "Appeal - Plaintiff win",
+    "Appeal - Defense win",
+    "Appeal - Remanded",
+    "Appeal - Mixed",
+    "Unknown"
+  ],
+
+  "Expert_Testimony_Type": [
+    "Plaintiff only",
+    "Defense only",
+    "Both",
+    "None mentioned",
+    "Unknown"
+  ],
+
+  "Index_Procedure_Type": [
+    "urgent-emergent appendectomy",
+    "interval appendectomy",
+    "incidental appendectomy",
+    "no appendectomy performed",
+    "unclear"
+  ],
+
+  "Procedure_Approach": [
+    "laparoscopic",
+    "converted",
+    "open",
+    "robotic",
+    "unclear"
+  ],
+
+  "Disease_State_at_Presentation": [
+    "uncomplicated appendicitis",
+    "perforated appendicitis",
+    "abscess-phlegmon",
+    "gangrenous-necrotic appendicitis",
+    "chronic-recurrent appendicitis",
+    "unclear"
+  ],
+
+  "Injury_Type_Primary": [
+    "delayed diagnosis with perforation",
+    "failed appendectomy",
+    "stump appendicitis",
+    "bowel injury",
+    "bleeding-vascular injury",
+    "abscess-infection",
+    "leak",
+    "obstruction-adhesive complication",
+    "fertility injury",
+    "mixed",
+    "other"
+  ],
+
+  "Injury_Severity": ["major", "minor", "unknown"],
+
+  "Recognition_Timing": [
+    "preoperative delayed diagnosis",
+    "intraoperative",
+    "early postoperative",
+    "delayed after discharge",
+    "unknown"
+  ],
+
+  "Difficulty_Assessability": ["clear", "possible", "not assessable"],
+
+  "Difficulty_Documented": ["explicit", "inferred", "not documented"],
+
+  "Adaptation_Type": [
+    "conversion",
+    "drain",
+    "bowel resection",
+    "interval management",
+    "antibiotics-first",
+    "subtotal-partial",
+    "call for help",
+    "referral",
+    "aborted",
+    "other",
+    "none"
+  ],
+
+  "First_Pass_Likely_Case_Type": [
+    "delayed_diagnosis",
+    "operative_complication",
+    "postop_management",
+    "payment_dispute",
+    "incidental_history",
+    "unclear"
+  ],
+
+  "Claim_Type": [
+    "FTCA_malpractice",
+    "section_1983_civil_rights",
+    "state_law_malpractice",
+    "EMTALA",
+    "military_Feres",
+    "other",
+    "unknown"
+  ],
+
+  "Plaintiff_Custodial_Status_Detail": [
+    "state_prisoner",
+    "federal_prisoner",
+    "pretrial_detainee",
+    "immigration_detainee",
+    "probationer_parolee",
+    "not_custodial",
+    "unknown"
+  ],
+
+  "Reviewer_Confidence_Score": [1, 2, 3, 4, 5],
+
+  "yes_no_unknown_fields_case_master": [
+    "Is_Malpractice_Case",
+    "Appendicitis_or_Appendectomy_Index_Episode",
+    "Index_Procedure_Appendectomy",
+    "Appendicitis_Diagnosis_Case",
+    "Has_Clinically_Meaningful_Appendicitis_or_Appendectomy_Harm",
+    "Wrong_Structure_Removed",
+    "Appendix_Not_Removed",
+    "Need_for_Reoperation",
+    "Need_for_Bowel_Resection",
+    "Need_for_Stoma",
+    "Tertiary_Referral",
+    "Death",
+    "Long_Term_Morbidity",
+    "NonSpecialist_Repair_or_Management",
+    "Difficult_Case",
+    "Perforated_or_Gangrenous_Appendix",
+    "Abscess_or_Phlegmon",
+    "Severe_Inflammation",
+    "Dense_Adhesions",
+    "Obesity_or_Habitus_Difficulty",
+    "Retrocecal_or_Unusual_Appendix_Location",
+    "Difficult_Dissection",
+    "Bleeding_Obscuring_Field",
+    "Conversion_to_Open",
+    "Bowel_Resection_or_Ileocecectomy",
+    "Stump_Leak_or_Stump_Problem",
+    "Appendix_Not_Removed_or_Wrong_Tissue",
+    "Difficulty_Recognized_By_Surgeon",
+    "Adaptation_Performed",
+    "Adaptation_Appears_Appropriate",
+    "Aberrant_Anatomy_Mentioned",
+    "Unexpected_Postop_Course_Referenced",
+    "Guideline_Adherence_Mentioned",
+    "Deliberate_Indifference_Standard_Applied"
+  ],
+
+  "yes_no_fields_case_master": [
+    "Expert_Testimony_Mentioned",
+    "Delayed_Diagnosis_Alleged",
+    "Improper_Postop_Management_Alleged",
+    "Failure_to_Refer_Alleged",
+    "Problematic_Visualization_Alleged",
+    "Inadequate_Informed_Consent_Alleged",
+    "Poor_Communication_Alleged",
+    "Total_Healthcare_Cost_Mentioned"
+  ],
+
+  "money_fields": [
+    "Damages_Award",
+    "Settlement_Amount",
+    "Economic_Damages",
+    "NonEconomic_Damages",
+    "Punitive_Damages"
+  ],
+
+  "numeric_fields": [
+    "Time_to_Resolution_Years",
+    "Time_From_Presentation_To_Diagnosis_Hours",
+    "Time_From_Surgery_To_Recognition_Days",
+    "Delay_Days"
+  ],
+
+  "free_text_fields_case_master": [
+    "Case_Name",
+    "Citation",
+    "Court",
+    "Legal_Case_Type",
+    "Procedural_Posture",
+    "Expert_Criticism_Text",
+    "Defense_Strategy_Summary",
+    "Alleged_Breach_Categories",
+    "Injury_Type_Secondary",
+    "Recognition_Timing_Detail",
+    "Operative_Text_Snippet",
+    "Difficulty_Text_Snippet",
+    "Recognition_Text_Snippet",
+    "Plaintiff_Demographics",
+    "Surgeon_Characteristics",
+    "Facility_Type",
+    "Preventability_Assessment",
+    "Reviewer_Notes"
+  ],
+
+  "extended_extraction_fields": [
+    "Comorbid_Diagnoses_Text",
+    "Operative_Findings_Detail",
+    "Plaintiff_Claims_Expanded",
+    "Plaintiff_Medical_Support_Summary",
+    "Defense_Medical_Rebuttal_Summary",
+    "Plaintiff_Expert_Summary",
+    "Defense_Expert_Summary",
+    "Court_Medical_Reasoning_Summary",
+    "Claim_Support_Matrix_JSON",
+    "Evidence_Quotes_JSON",
+    "Extended_Extraction_Notes"
+  ],
+
+  "snippet_char_limit": 400,
+  "short_text_char_limit": 500
+}
