@@ -1,0 +1,8 @@
+category_value,gender_tidy,age_group,inmate_status,pregnancy_related,military_or_veteran,pediatric_or_minor
+0,male: 25,nan: 36,no: 18,no: 33,no: 32,nan: 36
+1,nan: 17,pediatric_unspecified: 4,yes: 17,nan: 11,nan: 11,yes: 6
+2,female: 3,adult_unspecified: 2,nan: 11,yes: 2,yes: 3,no: 4
+3,mixed_multiple_plaintiffs: 1,middle_adult: 1,,,,
+4,,infant: 1,,,,
+5,,child: 1,,,,
+6,,young_adult: 1,,,,

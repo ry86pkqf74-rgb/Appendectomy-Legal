@@ -121,3 +121,54 @@ Any UNKNOWN on A or B, or an explicit NO on any of A/B/C, excludes the case. The
 - 413 rows still carry `Year=2026` because their Citation field is either a cross-reference pointer ("Declined to Follow by ...") without a usable reporter year, or the raw citation_hint was a reporter volume without a year anchor. The vast majority of the 82 core analytic cases have correct years.
 - Some pass-2 second-pass extractions returned partial structures; those cases are flagged in `Manual_Review_Queue` for human review.
 - gpt-oss-120b emits chain-of-thought in the `reasoning` field (harmony format); we read only the `content` field so the saved outputs never include the model's reasoning trace.
+
+---
+
+## Analytical layer (second wave)
+
+This repo also carries the **post-extraction** analytical layer. The canonical starting point is the Phase-1 handoff prompt (`HANDOFF_PROMPT.md` at repo root after this commit).
+
+### New top-level files
+
+| File | Role |
+|---|---|
+| `AppendectomyMaster_updated.xlsx` | **Canonical post-RUNPROD master** — the output of merging Jobs A/B/C/D back into the original workbook. Lives inside `extraction_2/` *and* copied to repo root for convenience. Built by `extraction_2/pipeline/merge_results.py`. |
+| `AppendectomyMaster_PRE_RUNPROD_20260422.xlsx` | Dated pre-run archive snapshot (== original `AppendectomyMaster.xlsx` as of 2026-04-22). Preserved for before/after diff comparisons. |
+| `MASTER_FILE_INTEGRITY_20260422.md` | One-page integrity summary: core count, LLM_Status, new-field distributions, confidence-score deltas. |
+| `build_tidy.py` | **Canonical tidy-dataset builder.** Reads `AppendectomyMaster_updated.xlsx`, filters to 82 core cases, emits `appendectomy_core_analytic_tidy.csv` (82 × 119 cols). Encodes the locked derived-column rules (see codebook). |
+| `codebook_derived_columns.md` | Tabular definitions of every derived column in `build_tidy.py` and its creation rule. |
+| `elicit_report.pdf` | Literature synthesis on appendicitis malpractice (Serban 2021, Chaudhary 2025, Glauser 2001, Brown-Forestiere 2020, Saber 2011, Lefebvre 2021, Cassaro 2015, Cobb 2015, Karki 2021). Comparator for Discussion. |
+| `analysis/tables/` | Pre-run descriptive tables (21 CSVs). Re-run against `AppendectomyMaster_updated.xlsx` in Phase 2. |
+| `analysis/figures/` | Pre-run figures (4 PNGs). Re-run in Phase 2. |
+| `analysis/pro_analysis_script_prerun.py` | Pro-review analysis script that produced the pre-run tables/figures. Adapt for post-run. |
+| `analysis/da_tidy_summary_prerun.md` | DA's tidy-dataset summary narrative (pre-run). Historical context for the descriptive layer. |
+
+### Three new legal-type fields added in the RUNPROD pass
+
+Added to `Case_Master_Template` specifically to unlock the FTCA-vs-§1983-vs-state-law bifurcation that drives the key analytical split. Populated on all 82 core cases.
+
+- `Claim_Type` — 41 section_1983_civil_rights · 19 FTCA_malpractice · 14 state_law_malpractice · 5 EMTALA · 3 other
+- `Plaintiff_Custodial_Status_Detail` — 39 not_custodial · 33 state_prisoner · 7 federal_prisoner · 3 pretrial_detainee
+- `Deliberate_Indifference_Standard_Applied` — 40 YES · 41 NO · 1 UNKNOWN
+
+These should stratify virtually every outcome analysis. §1983 / deliberate-indifference cases operate under a subjective-knowledge-of-risk standard with a much higher plaintiff bar; pooling them with FTCA/state-law negligence conflates two legally distinct populations.
+
+### Four extraction jobs merged into the master
+
+See `extraction_2/` and `LLM_PASSES_RUNBOOK.md` for full detail.
+
+| Job | Scope | n cases |
+|---|---|---:|
+| A | Pass-2 extraction on first-pass-only cases | 36 |
+| B | Re-extraction on low-confidence cases | 44 |
+| C | Extended narrative extraction for all core cases | 82 |
+| D | Targeted 3-field classification on high-confidence cases | 2 |
+
+Validation before/after diff lives at `extraction_2/validation_report.md`.
+
+### What's next (Phase 1+ — for the analyst picking this up)
+
+1. Run `build_tidy.py` against `AppendectomyMaster_updated.xlsx` → `appendectomy_core_analytic_tidy.csv` (82 × 119).
+2. Rebuild the analytical layer in `analysis/` (tables + figures) using the post-RUNPROD tidy, and stratify on `Claim_Type` / `Deliberate_Indifference_Standard_Applied`.
+3. Statistical modeling (Firth logistic, Fisher exact) per the Phase-3 plan in `HANDOFF_PROMPT.md` — quasi-complete separation is expected at this n.
+4. Manuscript drafting: Methods / Results / Discussion / Limitations, with the Elicit report as comparator.

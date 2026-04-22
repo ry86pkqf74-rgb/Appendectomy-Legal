@@ -1,0 +1,15 @@
+field,n_total_core,missing_n,unknown_n,not_documented_n,unclear_n,not_assessable_n,noninformative_n,noninformative_pct,available_n
+Settlement_Amount,82,81,0,0,0,0,81,0.9878048780487805,1
+Difficult_Case,82,36,44,0,0,0,80,0.975609756097561,46
+Difficulty_Documented,82,36,0,43,0,0,79,0.9634146341463414,46
+Damages_Award_Adjusted_2026,82,78,0,0,0,0,78,0.9512195121951219,4
+Procedure_Approach,82,36,1,0,39,0,76,0.926829268292683,46
+Adaptation_Performed,82,36,39,0,0,0,75,0.9146341463414634,46
+Perforated_or_Gangrenous_Appendix,82,36,21,0,0,0,57,0.6951219512195121,46
+Plaintiff_Demographics,82,43,4,0,0,0,47,0.573170731707317,39
+Recognition_Timing,82,36,6,0,0,0,42,0.5121951219512195,46
+Legal_Outcome,82,36,6,0,0,0,42,0.5121951219512195,46
+Inadequate_Informed_Consent_Alleged,82,36,4,0,0,0,40,0.4878048780487805,46
+Alleged_Breach_Categories,82,36,0,0,0,0,36,0.43902439024390244,46
+Expert_Testimony_Mentioned,82,36,0,0,0,0,36,0.43902439024390244,46
+Reviewer_Confidence_Score,82,36,0,0,0,0,36,0.43902439024390244,46

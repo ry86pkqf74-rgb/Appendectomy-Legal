@@ -1,0 +1,25 @@
+grouping,group_value,n_cases_in_group,n_with_explicit_payout,mean_payout,median_payout,min_payout,max_payout
+overall,all,46,5,529349.942,40134.62,6910.46,2092331.62
+first_pass_case_type,delayed_diagnosis,23,2,23522.54,23522.54,6910.46,40134.62
+first_pass_case_type,operative_complication,18,3,866568.21,500000.0,7373.01,2092331.62
+first_pass_case_type,postop_management,5,0,,,,
+delayed_diagnosis_alleged,NO,16,2,1296165.81,1296165.81,500000.0,2092331.62
+delayed_diagnosis_alleged,YES,30,3,18139.363333333335,7373.01,6910.46,40134.62
+injury_type_primary,abscess-infection,5,1,7373.01,7373.01,7373.01,7373.01
+injury_type_primary,delayed diagnosis with perforation,21,1,40134.62,40134.62,40134.62,40134.62
+injury_type_primary,failed appendectomy,10,1,2092331.62,2092331.62,2092331.62,2092331.62
+injury_type_primary,leak,1,0,,,,
+injury_type_primary,obstruction-adhesive complication,1,0,,,,
+injury_type_primary,other,8,2,253455.23,253455.23,6910.46,500000.0
+injury_severity,major,38,4,659959.8125,270067.31,7373.01,2092331.62
+injury_severity,unknown,8,1,6910.46,6910.46,6910.46,6910.46
+gender_tidy,female,3,0,,,,
+gender_tidy,male,25,4,138604.5225,23753.815000000002,6910.46,500000.0
+gender_tidy,mixed_multiple_plaintiffs,1,0,,,,
+gender_tidy,,17,1,2092331.62,2092331.62,2092331.62,2092331.62
+inmate_status,no,18,4,138604.5225,23753.815000000002,6910.46,500000.0
+inmate_status,yes,17,0,,,,
+inmate_status,,11,1,2092331.62,2092331.62,2092331.62,2092331.62
+pediatric_or_minor,no,4,1,40134.62,40134.62,40134.62,40134.62
+pediatric_or_minor,yes,6,1,500000.0,500000.0,500000.0,500000.0
+pediatric_or_minor,,36,3,702205.0299999999,7373.01,6910.46,2092331.62
